@@ -6,8 +6,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                // For Windows, use 'bat'. For Linux/macOS, use 'sh'.
-                bat 'python -m unittest discover'
+                // For Linux/macOS based containers, use 'sh'. For Windows, use 'bat'.
+                sh 'python -m unittest discover'
             }
         }
     }
